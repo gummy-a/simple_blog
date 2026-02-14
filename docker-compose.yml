@@ -15,7 +15,7 @@ services:
     build: src/be/
     container_name: backend
     environment:
-      ALLOW_CORS_ORIGIN: http://localhost:3000
+      ALLOW_CORS_ORIGIN: http://localhost:80
       JWT_SECRET_KEY: fSKaeKuj6sgFMYdcwL06qdXiJZ6I57rJ
       DATABASE_URL: postgres://postgres:password@db:5432/simple_blog
     depends_on:
@@ -37,5 +37,5 @@ services:
     environment:
       NEXT_PUBLIC_BACKEND_URL: http://backend:8080
     ports:
-      - "3000:3000"
+      - "80:3000"
 
